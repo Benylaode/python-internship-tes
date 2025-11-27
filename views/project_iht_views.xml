@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="view_project_form_iht" model="ir.ui.view">
+        <field name="name">project.project.form.iht</field>
+        <field name="model">project.project</field>
+        <field name="inherit_id" ref="project.edit_project"/>
+        
+        <field name="arch" type="xml">
+            <xpath expr="//field[@name='description']" position="after">
+                
+                <group string="Informasi Tambahan Project IHT">
+                    <field name="alamat"/>
+
+                    <group string="Koordinat">
+                        <field name="latitude"/>
+                        <field name="longitude"/>
+                    </group>
+
+                    <field name="source_aplikasi_pendukung"/>
+                    <field name="daftar_pekerja_remote"
+                           placeholder='Contoh: ["fahmi"]'/>
+                </group>
+
+            </xpath>
+        </field>
+    </record>
+</odoo>
